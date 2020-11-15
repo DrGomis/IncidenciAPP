@@ -26,11 +26,11 @@ public class LoginActivity extends AppCompatActivity {
         button.setOnClickListener(new View.OnClickListener() {
             public void onClick(View v) {
 
-                /*String user = username.getText().toString();
-                String pass = password.getText().toString();*/
+                String user = username.getText().toString();
+                String pass = password.getText().toString();
 
-                String user = "admin";
-                String pass = "admin";
+               /* String user = "admin";
+                String pass = "admin";*/
 
                 if (user.equals("admin") && pass.equals("admin")) {
                     Log.i("Status", "Login: Success!");
