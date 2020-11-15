@@ -1,0 +1,54 @@
+<resources>
+    <string name="app_name">Administrador de Incidencias</string>
+
+    <!-- Login Activity -->
+    <string name="your_username">Tu usuario</string>
+    <string name="hint_username">Usuario</string>
+    <string name="your_password">Tu contraseña</string>
+    <string name="login_btn">Conectarse</string>
+
+    <!-- Top Menu -->
+    <string name="menu_add_issue">AÑADIR</string>
+    <string name="menu_list_issue">LISTAR</string>
+    <string name="menu_del_issue">ELIMINAR</string>
+    <string name="menu_settings">AJUSTES</string>
+    <string name="menu_no_issues_added">¡No se ha añadido ninguna incidencia!</string>
+
+    <!-- Add Issue Fragment -->
+    <string name="add_issue_header">AÑADIR INCIDENCIA</string>
+    <string name="issue_name">Nombre de la incidencia</string>
+    <string name="priority">Prioridad</string>
+    <string name="btn_add">Añadir</string>
+        <!-- Priority Values -->
+        <string name="prio_high">Alta</string>
+        <string name="prio_medium">Media</string>
+        <string name="prio_low">Baja</string>
+        <!-- Alert -->
+        <string name="alert_add_success">¡Se ha añadido con éxito!</string>
+        <string name="alert_success_msg1">Título: </string>
+        <string name="alert_success_msg2">Prioridad: </string>
+        <string name="alert_add_error">¡ERROR!</string>
+        <string name="alert_error_msg">¡El nombre no puede estar vacío!</string>
+        <string name="alert_close">CERRAR</string>
+
+    <!-- List Issue Fragment -->
+    <string name="list_title">Título</string>
+    <string name="list_priority">Prioridad</string>
+
+    <!-- Remove Issue Fragment -->
+    <string name="remove_issue_header">ELIMINAR INCIDENCIAS</string>
+    <string name="remove_issue_id">ID de la incidencia</string>
+    <string name="remove_issue_btn">ELIMINAR</string>
+    <string name="remove_issue_alert">¡Cuidado!</string>
+    <string name="remove_issue_alert_msg">Vas a eliminar la incidencia: </string>
+    <string name="remove_issue_alert_confirm">Confirmar</string>
+    <string name="remove_issue_alert_cancel">Cancelar</string>
+    <string name="remove_issue_toast_success">¡Se ha eliminado con éxito!</string>
+    <string name="remove_issue_toast_error">¡Incidencia inexistente!</string>
+
+    <!-- Settings Fragment -->
+    <string name="settings_lbl_language">Idioma</string>
+    <string name="settings_lbl_restore">Restaurar preferencias</string>
+    <string name="settings_lbl_restore_btn">RESTAURAR</string>
+
+</resources>

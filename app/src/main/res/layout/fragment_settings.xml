@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/fragmentLayout4"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/lbl_language"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/settings_lbl_language"
+            android:textSize="30sp" />
+
+        <Button
+            android:id="@+id/btn_ES"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Español" />
+
+        <Button
+            android:id="@+id/btn_EN"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="English" />
+
+        <Button
+            android:id="@+id/btn_JP"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="日本語" />
+
+        <TextView
+            android:id="@+id/lbl_settingsRemove"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/settings_lbl_restore"
+            android:textSize="30sp" />
+
+        <Button
+            android:id="@+id/btn_restore"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/settings_lbl_restore_btn" />
+    </LinearLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>

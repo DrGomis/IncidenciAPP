@@ -1,0 +1,55 @@
+<resources>
+    <string name="app_name">Issue Manager</string>
+
+    <!-- Login Activity -->
+    <string name="your_username">Your username</string>
+    <string name="hint_username">Username</string>
+    <string name="your_password">Your password</string>
+    <string name="login_btn">Login</string>
+
+    <!-- Top Menu -->
+    <string name="menu_add_issue">ADD</string>
+    <string name="menu_list_issue">LIST</string>
+    <string name="menu_del_issue">REMOVE</string>
+    <string name="menu_settings">SETTINGS</string>
+    <string name="menu_no_issues_added">No issues added!</string>
+
+    <!-- Add Issue Fragment -->
+    <string name="add_issue_header">ADD ISSUE</string>
+    <string name="issue_name">Issue name</string>
+    <string name="priority">Priority</string>
+    <string name="btn_add">Add</string>
+        <!-- Priority Values -->
+        <string name="prio_high">High</string>
+        <string name="prio_medium">Medium</string>
+        <string name="prio_low">Low</string>
+        <!-- Alert -->
+        <string name="alert_add_success">Succesfully added!</string>
+        <string name="alert_success_msg1">Title: </string>
+        <string name="alert_success_msg2">Priority: </string>
+        <string name="alert_add_error">ERROR!</string>
+        <string name="alert_error_msg">The issue name cannot be empty!</string>
+        <string name="alert_close">CLOSE</string>
+
+    <!-- List Issue Fragment -->
+    <string name="list_title">Title</string>
+    <string name="list_priority">Priority</string>
+
+    <!-- Remove Issue Fragment -->
+    <string name="remove_issue_header">REMOVE ISSUES</string>
+    <string name="remove_issue_id">Issue ID</string>
+    <string name="remove_issue_btn">REMOVE</string>
+    <string name="remove_issue_alert">Warning!</string>
+    <string name="remove_issue_alert_msg">You are going to remove the issue: </string>
+    <string name="remove_issue_alert_confirm">Confirm</string>
+    <string name="remove_issue_alert_cancel">Cancel</string>
+    <string name="remove_issue_toast_success">Successfully removed!</string>
+    <string name="remove_issue_toast_error">The issue does not exist!</string>
+
+    <!-- Settings Fragment -->
+    <string name="settings_lbl_language">Language</string>
+    <string name="settings_lbl_restore">Restore preferences</string>
+    <string name="settings_lbl_restore_btn">RESTORE DEFAUTLS</string>
+
+
+</resources>

@@ -1,0 +1,53 @@
+<resources>
+    <string name="app_name">インシデント</string>
+
+    <!-- Login Activity -->
+    <string name="your_username">ユーザー名</string>
+    <string name="hint_username">ユーザー</string>
+    <string name="your_password">パスワード</string>
+    <string name="login_btn">ログイン</string>
+
+    <!-- Top Menu -->
+    <string name="menu_add_issue">追加</string>
+    <string name="menu_list_issue">リスト</string>
+    <string name="menu_del_issue">削除</string>
+    <string name="menu_settings">設定</string>
+    <string name="menu_no_issues_added">問題は追加されていません！</string>
+
+    <!-- Add Issue Fragment -->
+    <string name="add_issue_header">問題を追加</string>
+    <string name="issue_name">名前</string>
+    <string name="priority">優先度</string>
+    <string name="btn_add">追加</string>
+        <!-- Priority Values -->
+        <string name="prio_high">高い</string>
+        <string name="prio_medium">中</string>
+        <string name="prio_low">低</string>
+        <!-- Alert -->
+        <string name="alert_add_success">成功!</string>
+        <string name="alert_success_msg1">題名: </string>
+        <string name="alert_success_msg2">優先度: </string>
+        <string name="alert_add_error">エラー!</string>
+        <string name="alert_error_msg">名前を空にすることはできません！</string>
+        <string name="alert_close">閉じる</string>
+
+    <!-- List Issue Fragment -->
+    <string name="list_title">題名</string>
+    <string name="list_priority">優先度</string>
+
+    <!-- Remove Issue Fragment -->
+    <string name="remove_issue_header">問題を削除する</string>
+    <string name="remove_issue_id">ID 問題</string>
+    <string name="remove_issue_btn">削除</string>
+    <string name="remove_issue_alert">警告！</string>
+    <string name="remove_issue_alert_msg">問題を削除します。 </string>
+    <string name="remove_issue_alert_confirm">確認</string>
+    <string name="remove_issue_alert_cancel">キャンセル</string>
+    <string name="remove_issue_toast_success">正常に削除されました！</string>
+    <string name="remove_issue_toast_error">問題は存在しません!</string>
+
+    <!-- Settings Fragment -->
+    <string name="settings_lbl_language">言語</string>
+    <string name="settings_lbl_restore">設定を復元する</string>
+    <string name="settings_lbl_restore_btn">戻す</string>
+</resources>
