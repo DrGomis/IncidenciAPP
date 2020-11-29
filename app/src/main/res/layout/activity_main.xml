@@ -6,15 +6,27 @@
     android:layout_height="match_parent"
     tools:context=".app.MainActivity">
 
+    <TextView
+        android:id="@+id/welcome_lbl"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="4dp"
+        android:textSize="24sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.02"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
     <fragment
-    android:id="@+id/top_menu"
-    android:name="com.example.issuemanager.app.usecase.menu.fragment.TopMenuFragment"
-    android:layout_width="match_parent"
-    android:layout_height="wrap_content"
-    app:layout_constraintEnd_toEndOf="parent"
-    app:layout_constraintStart_toStartOf="parent"
-    app:layout_constraintTop_toTopOf="parent"
-    tools:layout="@layout/fragment_menu"></fragment>
+        android:id="@+id/top_menu"
+        android:name="com.example.issuemanager.app.usecase.menu.fragment.TopMenuFragment"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/welcome_lbl"
+        tools:layout="@layout/fragment_menu"></fragment>
 
     <androidx.constraintlayout.widget.ConstraintLayout
         android:id="@+id/constaintFragment"

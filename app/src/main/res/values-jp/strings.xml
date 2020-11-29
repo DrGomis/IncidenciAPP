@@ -6,8 +6,10 @@
     <string name="hint_username">ユーザー</string>
     <string name="your_password">パスワード</string>
     <string name="login_btn">ログイン</string>
+    <string name="invalid_user">無効な資格情報</string>
 
     <!-- Top Menu -->
+    <string name="logged_as">として記録</string>
     <string name="menu_add_issue">追加</string>
     <string name="menu_list_issue">リスト</string>
     <string name="menu_del_issue">削除</string>
@@ -34,13 +36,24 @@
     <!-- List Issue Fragment -->
     <string name="list_title">題名</string>
     <string name="list_priority">優先度</string>
+    <string name="list_status">状態</string>
+    <!-- Status Values -->
+    <string name="status_all">すべて</string>
+    <string name="status_pending">保留中</string>
+    <string name="status_assigned">割り当て済み</string>
+    <string name="status_solved">解決済み</string>
+    <!-- Extra Tab -->
+    <string name="extra_information">情報</string>
+    <string name="extra_description">説明</string>
+    <string name="extra_date">日付</string>
+    <string name="extra_delete">削除</string>
 
     <!-- Remove Issue Fragment -->
     <string name="remove_issue_header">問題を削除する</string>
     <string name="remove_issue_id">ID 問題</string>
     <string name="remove_issue_btn">削除</string>
     <string name="remove_issue_alert">警告！</string>
-    <string name="remove_issue_alert_msg">問題を削除します。 </string>
+    <string name="remove_issue_alert_msg">問題を削除します</string>
     <string name="remove_issue_alert_confirm">確認</string>
     <string name="remove_issue_alert_cancel">キャンセル</string>
     <string name="remove_issue_toast_success">正常に削除されました！</string>

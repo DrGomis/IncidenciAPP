@@ -11,6 +11,17 @@
         android:orientation="horizontal">
 
         <TextView
+            android:id="@+id/itemListStatus"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Status"
+            android:layout_weight="1"
+            android:paddingLeft="8dp"
+            android:background="#EF1515"
+            android:textColor="#EEEEEE"
+            app:cornerRadius="@android:dimen/notification_large_icon_height" />
+
+        <TextView
             android:id="@+id/itemListID"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"

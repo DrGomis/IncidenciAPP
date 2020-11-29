@@ -1,7 +1,9 @@
 package com.example.issuemanager.app.usecase.menu.fragment;
 
+import android.content.res.Configuration;
 import android.database.sqlite.SQLiteDatabase;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -43,11 +45,10 @@ public class TopMenuFragment extends Fragment {
             dbHelper = new IssueSQLiteHelper(getContext());
             db = dbHelper.getReadableDatabase();
 
-
             // Add Issue
             btnAdd.setOnClickListener(new View.OnClickListener() {
                 public void onClick(View v) {
-                    androidx.fragment.app.Fragment frAddIssue = new AddIssueFragment();
+                    Fragment frAddIssue = new AddIssueFragment();
                     MenuManager(frAddIssue);
                 }
             });
@@ -55,7 +56,6 @@ public class TopMenuFragment extends Fragment {
             // List Issues
             btnList.setOnClickListener(new View.OnClickListener() {
                 public void onClick(View v) {
-
                     isEmpty = IssueSQLiteHelper.isDBEmpty(db);
                     if (!isEmpty) {
                         Fragment frListIssues = new ListIssueFragment();
@@ -71,7 +71,6 @@ public class TopMenuFragment extends Fragment {
             btnDel.setOnClickListener(new View.OnClickListener() {
                 public void onClick(View v) {
                     isEmpty = IssueSQLiteHelper.isDBEmpty(db);
-
                     if (!isEmpty) {
                         Fragment frRemoveIssue = new DeleteIssueFragment();
                         MenuManager(frRemoveIssue);
@@ -88,20 +87,14 @@ public class TopMenuFragment extends Fragment {
                     MenuManager(frSettings);
                 }
             });
-
-
             return frMenu;
         }
 
-        public void MenuManager(androidx.fragment.app.Fragment param) {
+        public void MenuManager(Fragment param) {
             FragmentManager menuManager = getFragmentManager();
             FragmentTransaction menuTransaction = menuManager.beginTransaction();
 
             menuTransaction.replace(R.id.fragmentView, param);
             menuTransaction.commit();
         }
-
-
-
-
 }

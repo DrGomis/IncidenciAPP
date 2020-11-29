@@ -7,6 +7,7 @@ import android.os.Bundle;
 import androidx.appcompat.app.AlertDialog;
 import androidx.fragment.app.Fragment;
 
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -49,6 +50,7 @@ public class AddIssueFragment extends Fragment {
         prioDropdown.setAdapter(adapter);
 
         final EditText issueName = v.findViewById(R.id.field_issueName);
+        final EditText issueDesc = v.findViewById(R.id.field_issueDesc);
 
         final Button btnSaveIssue = v.findViewById(R.id.btn_Add);
         btnSaveIssue.setOnClickListener(new View.OnClickListener() {
@@ -56,10 +58,27 @@ public class AddIssueFragment extends Fragment {
 
                 String title = issueName.getText().toString();
                 String prio = prioDropdown.getSelectedItem().toString();
+                String desc = issueDesc.getText().toString();
+
                 checkData(title, prio);
 
+                // Used to translate prios when listed
+                if (prio.equals(getResources().getString(R.string.prio_low))) {
+                    prio = "1";
+                } else if (prio.equals(getResources().getString(R.string.prio_medium))) {
+                    prio = "2";
+                } else if (prio.equals(getResources().getString(R.string.prio_high))) {
+                    prio = "3";
+                }
+
+                // Adds the Issue to the DB
                 if (title.length() > 0) {
                     Issue issue = new Issue(title, prio);
+                    // Sets current date
+                    issue.setUnixDate(System.currentTimeMillis() / 1000);
+                    // Sets description
+                    issue.setDesc(desc);
+                    // Stores issue in DB
                     dbHelper.insertIssue(db, issue);
                 }
             }
@@ -80,7 +99,7 @@ public class AddIssueFragment extends Fragment {
 
         if (title.length() > 0) { // Data is correct
             alertDialog.setTitle(getResources().getString(R.string.alert_add_success));
-            alertDialog.setMessage(getResources().getString(R.string.alert_success_msg1) + title + "\n" + getResources().getString(R.string.alert_success_msg2) + prio);
+            alertDialog.setMessage(getResources().getString(R.string.alert_success_msg1) + " " + title + "\n" + getResources().getString(R.string.alert_success_msg2) + " " + prio);
         } else {
             alertDialog.setTitle(getResources().getString(R.string.alert_add_error));
             alertDialog.setMessage(getResources().getString(R.string.alert_error_msg));
@@ -93,5 +112,4 @@ public class AddIssueFragment extends Fragment {
                 });
         alertDialog.show();
     }
-
 }

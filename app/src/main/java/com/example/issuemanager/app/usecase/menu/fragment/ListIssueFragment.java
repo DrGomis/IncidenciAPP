@@ -6,6 +6,9 @@ import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.ArrayAdapter;
+import android.widget.Button;
+import android.widget.Spinner;
 
 import androidx.fragment.app.Fragment;
 import androidx.recyclerview.widget.LinearLayoutManager;
@@ -17,6 +20,8 @@ import com.example.issuemanager.app.MainActivity;
 import com.example.issuemanager.R;
 import com.example.issuemanager.db.IssueSQLiteHelper;
 import com.example.issuemanager.db.model.Issue;
+
+import java.util.List;
 
 
 public class ListIssueFragment extends Fragment {
@@ -33,16 +38,50 @@ public class ListIssueFragment extends Fragment {
                              Bundle savedInstanceState) {
         View listView = inflater.inflate(R.layout.fragment_list_issue, container, false);
 
+        sendList(listView, 3);
+
+        String [] statusValues = {getResources().getString(R.string.status_all), getResources().getString(R.string.status_pending), getResources().getString(R.string.status_assigned), getResources().getString(R.string.status_solved)};
+
+        final Spinner statusDropdown = (Spinner) listView.findViewById(R.id.spr_issueStatus);
+        ArrayAdapter<String> adapter = new ArrayAdapter<String>(this.getActivity(), android.R.layout.simple_spinner_item, statusValues);
+        adapter.setDropDownViewResource(android.R.layout.simple_dropdown_item_1line);
+        statusDropdown.setAdapter(adapter);
+
+
+        Button btn_filter = listView.findViewById(R.id.filter_btn);
+        btn_filter.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                String status = statusDropdown.getSelectedItem().toString();
+                int filterID = 3;
+
+                if (status.equals(getResources().getString(R.string.status_all))) {
+                    filterID = 3;
+                } else if (status.equals(getResources().getString(R.string.status_pending))) {
+                    filterID = 0;
+                } else if (status.equals(getResources().getString(R.string.status_assigned))) {
+                    filterID = 1;
+                } else if (status.equals(getResources().getString(R.string.status_solved))) {
+                    filterID = 2;
+                }
+
+                sendList(listView, filterID);
+            }
+        });
+
+
+        return listView;
+    }
+
+    public void sendList(View v, int filter) {
         dbHelper = new IssueSQLiteHelper(getContext());
         db = dbHelper.getWritableDatabase();
 
-        RecyclerView recyclerView = (RecyclerView)listView.findViewById(R.id.recycler);
-        recyclerView.setLayoutManager(new LinearLayoutManager((listView.getContext())));
+        RecyclerView recyclerView = (RecyclerView)v.findViewById(R.id.recycler);
+        recyclerView.setLayoutManager(new LinearLayoutManager((v.getContext())));
 
         // Sends all DB Issues
-        RecyclerViewAdapter adapter = new RecyclerViewAdapter(IssueSQLiteHelper.getAllIssues(db));
+        RecyclerViewAdapter adapter = new RecyclerViewAdapter(getContext(), IssueSQLiteHelper.getAllIssues(db, filter));
         recyclerView.setAdapter(adapter);
-
-        return listView;
     }
 }

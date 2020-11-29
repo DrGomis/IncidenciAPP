@@ -6,8 +6,10 @@
     <string name="hint_username">Usuario</string>
     <string name="your_password">Tu contraseña</string>
     <string name="login_btn">Conectarse</string>
+    <string name="invalid_user">Credenciales no válidas</string>
 
     <!-- Top Menu -->
+    <string name="logged_as">Conectado/a como</string>
     <string name="menu_add_issue">AÑADIR</string>
     <string name="menu_list_issue">LISTAR</string>
     <string name="menu_del_issue">ELIMINAR</string>
@@ -34,13 +36,24 @@
     <!-- List Issue Fragment -->
     <string name="list_title">Título</string>
     <string name="list_priority">Prioridad</string>
+    <string name="list_status">Estado</string>
+    <!-- Status Values -->
+    <string name="status_all">TODAS</string>
+    <string name="status_pending">PENDIENTE</string>
+    <string name="status_assigned">ASIGNADA</string>
+    <string name="status_solved">RESUELTA</string>
+    <!-- Extra Tab -->
+    <string name="extra_information">Información</string>
+    <string name="extra_description">Descripción</string>
+    <string name="extra_date">Fecha</string>
+    <string name="extra_delete">BORRAR</string>
 
     <!-- Remove Issue Fragment -->
     <string name="remove_issue_header">ELIMINAR INCIDENCIAS</string>
     <string name="remove_issue_id">ID de la incidencia</string>
     <string name="remove_issue_btn">ELIMINAR</string>
     <string name="remove_issue_alert">¡Cuidado!</string>
-    <string name="remove_issue_alert_msg">Vas a eliminar la incidencia: </string>
+    <string name="remove_issue_alert_msg">Vas a eliminar la incidencia</string>
     <string name="remove_issue_alert_confirm">Confirmar</string>
     <string name="remove_issue_alert_cancel">Cancelar</string>
     <string name="remove_issue_toast_success">¡Se ha eliminado con éxito!</string>
