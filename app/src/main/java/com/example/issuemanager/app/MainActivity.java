@@ -35,6 +35,7 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
+        //A TOPE
 
         // Logged as
         sharedPref = this.getSharedPreferences("APP_SETTINGS", Context.MODE_PRIVATE);
